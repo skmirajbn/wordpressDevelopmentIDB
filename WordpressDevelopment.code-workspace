@@ -1,0 +1,14 @@
+{
+  "folders": [
+    {
+      "path": "wp-content/themes/skmirajtheme/HTML Design/Tailwind"
+    },
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "tailwindCSS.emmetCompletions": true,
+    "liveServer.settings.multiRootWorkspaceName": "Tailwind"
+  }
+}
