@@ -31,10 +31,12 @@
     width: 1320px;
   }
 
-  .btn {
-    @apply py-1 px-4 rounded-sm border-0;
-  }
-  .btn-orange {
-    @apply text-white bg-orange-500;
+  @layer components {
+    .Btn {
+      @apply py-2 px-6 rounded-sm border-0;
+    }
+    .btn-orange {
+      @apply text-white bg-orange-500;
+    }
   }
 }
