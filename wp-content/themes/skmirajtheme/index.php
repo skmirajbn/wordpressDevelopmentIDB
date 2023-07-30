@@ -16,12 +16,18 @@
   </script>
 </head>
 
+
 <body class="dark:bg-[#081C24] dark:text-white">
   <header class="bg-cyan-800 dark:bg-[#081C24]">
     <!-- Nav Area Fixed -->
     <div class="md:fixed md:z-10 dark:md:bg-[#081C24] md:bg-[#155E75] w-full">
       <nav class="container md:flex md:space-x-12 md:justify-end py-5 text-center md:items-center">
-        <ul class="flex text-white md:space-x-5 justify-center md:flex-row flex-col text-center">
+        <?= wp_nav_menu(array(
+          "theme_location" => "primary",
+          "menu_class" => "flex text-white md:space-x-5 justify-center md:flex-row flex-col text-center",
+          "menu_id" => "main_menu",
+        )) ?>
+        <!-- <ul class="flex text-white md:space-x-5 justify-center md:flex-row flex-col text-center">
           <button class="dark:hidden" onclick="toggleDark()"><i class="fa-regular fa-moon"></i></button>
           <button class="dark:block hidden" onclick="toggleDark()"><i class="fa-solid fa-sun"></i></button>
           <li class="hover:text-orange-500 mt-4 md:mt-0"><a href="#">Home</a></li>
@@ -32,7 +38,7 @@
           <li class="hover:text-orange-500"><a href="#latest_news">Our Team</a></li>
           <li class="hover:text-orange-500"><a href="#latest_news">FAQ</a></li>
           <li class="hover:text-orange-500"><a href="#">Contact</a></li>
-        </ul>
+        </ul> -->
         <button class="Btn btn-orange mt-4 md:mt-0">Login</button>
       </nav>
     </div>
@@ -114,7 +120,7 @@
     </div>
   </section>
   <!-- Happy Clients Section -->
-  <section id="happy_clients" class="mt-12">
+  <section id="happy_clients" class="mt-12 scroll-mt-32">
     <div class="container">
       <h2 class="text-3xl text-center font-bold">Happy <span class="text-orange-500">Clients says</span></h2>
       <!-- Clients Cards Container -->
@@ -180,7 +186,7 @@
     </div>
   </section>
   <!-- Pricing Sectoin -->
-  <section id="pricing" class="mt-20">
+  <section id="pricing" class="mt-20 scroll-mt-32">
     <div class="container">
       <!-- component -->
       <div class="w-full flex flex-col items-center">
@@ -299,10 +305,11 @@
     </div>
   </section>
   <!-- Team Section -->
-  <section class="mt-28">
+  <section id="team" class="mt-28 scroll-mt-24">
     <div class="container px-6 py-10 mx-auto">
-      <h1 class="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">Our Executive
-        Team</h1>
+      <h1 class="text-3xl text-center font-bold">Our
+        <span class="text-orange-500">Executive Team</span>
+      </h1>
 
       <p class="max-w-2xl mx-auto my-6 text-center text-gray-500 dark:text-gray-300">Lorem ipsum dolor sit amet
         consectetur adipisicing elit. Illo incidunt ex placeat modi magni quia error alias, adipisci rem similique, at
