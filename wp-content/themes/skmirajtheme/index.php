@@ -46,16 +46,19 @@
     <div class="container md:px-0 px-4 md:pt-16">
       <div id="banner" class="flex md:flex-row flex-col gap-14 py-12 text-white">
         <div class="md:w-1/2 w-full md:space-y-4 md:mt-6 text-center md:text-left">
-          <p class="text-sm font-light md:text-lg">Computer-controlled digital transistorized with electronic advance
+          <p class="text-sm font-light md:text-lg">
+            <?= get_theme_mod('banner_top_text') ?>
           </p>
-          <h2 class="text-3xl font-bold pb-5 md:text-6xl">Honda CBR 300R</h2>
-          <p class="text-sm font-light pb-5 md:text-lg">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Impedit rem corporis aperiam, rerum consequuntur nihil labore qui cumque quam nostrum. Quidem adipisci
-            dolores eveniet suscipit ipsa aliquid officia iure architecto.</p>
+          <h2 class="text-3xl font-bold pb-5 md:text-6xl">
+            <?= get_theme_mod('banner_text') ?>
+          </h2>
+          <p class="text-sm font-light pb-5 md:text-lg">
+            <?= get_theme_mod('banner_des_text') ?>
+          </p>
           <button class="Btn btn-orange">Purchase</button>
         </div>
         <div class="md:w-1/2 w-full relative z-0">
-          <img src="<?= get_template_directory_uri() ?>/dist/img/Honda-cbr-photo.png" alt="" />
+          <img src="<?= get_theme_mod('banner_settings') ?>" alt="" />
           <img class="absolute right-0 top-0 w-20 -z-10 lg:right-20 lg:top-10"
             src="<?= get_template_directory_uri() ?>/dist/img/dots.svg" alt="" />
         </div>
@@ -127,8 +130,7 @@
       <div id="clients_cards" class="flex md:flex-row flex-col mt-12 gap-12 px-5">
         <!-- Client Card -->
         <div class="md:w-1/3 w-full rounded-md ring-gray-300 ring-1 p-5">
-          <img class="w-5/12 mx-auto rounded-full" src="<?= get_template_directory_uri() ?>/dist/img/happy-client-1.png"
-            alt="" />
+          <img class="w-5/12 mx-auto rounded-full" src="<?= get_theme_mod('client_image_1') ?>" alt="" />
           <p class="text-sm text-center text-gray-500 w-2/3 mx-auto mt-5">Lorem ipsum dolor sit amet consectetur
             adipisicing elit. Eaque illo ipsa tempore mollitia possimus numquam libero facere eveniet id at!</p>
           <!-- Ratings -->
