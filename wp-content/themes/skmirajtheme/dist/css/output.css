@@ -6040,36 +6040,22 @@ html {
   transform: translateY(0) scale(1);
   z-index: 3;
   opacity: 1; }
-.swap {
-  position: relative;
-  display: inline-grid;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  place-content: center;
-  cursor: pointer; }
-.swap > * {
-  grid-column-start: 1;
-  grid-row-start: 1;
-  transition-duration: 300ms;
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  transition-property: transform, opacity; }
-.swap input {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none; }
-.swap .swap-on,
-.swap .swap-indeterminate,
-.swap input:indeterminate ~ .swap-on {
-  opacity: 0; }
-.swap input:checked ~ .swap-off,
-.swap.swap-active .swap-off,
-.swap input:indeterminate ~ .swap-off {
-  opacity: 0; }
-.swap input:checked ~ .swap-on,
-.swap-active .swap-on,
-.swap input:indeterminate ~ .swap-indeterminate {
-  opacity: 1; }
+.textarea {
+  flex-shrink: 1;
+  min-height: 3rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  line-height: 2;
+  border-width: 1px;
+  border-color: hsl(var(--bc) / var(--tw-border-opacity));
+  --tw-border-opacity: 0;
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--b1) / var(--tw-bg-opacity));
+  border-radius: var(--rounded-btn, 0.5rem); }
 .toggle {
   flex-shrink: 0;
   --tglbg: hsl(var(--b1));
@@ -6308,10 +6294,6 @@ details.collapse summary::-webkit-details-marker {
 .menu :where(li > .menu-dropdown-toggle.menu-dropdown-show):after {
   transform: rotate(225deg);
   margin-top: 0; }
-.mockup-phone .display {
-  overflow: hidden;
-  border-radius: 40px;
-  margin-top: -25px; }
 .mockup-browser .mockup-browser-toolbar .input {
   position: relative;
   margin-left: auto;
@@ -6385,6 +6367,28 @@ details.collapse summary::-webkit-details-marker {
     transform: translateY(-0.125em); }
   100% {
     transform: translateY(0); } }
+.textarea:focus {
+  outline-style: solid;
+  outline-width: 2px;
+  outline-offset: 2px;
+  outline-color: hsl(var(--bc) / 0.2); }
+.textarea-disabled,
+  .textarea:disabled,
+  .textarea[disabled] {
+  cursor: not-allowed;
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--b2) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--b2) / var(--tw-bg-opacity));
+  --tw-text-opacity: 0.2; }
+.textarea-disabled::-moz-placeholder, .textarea:disabled::-moz-placeholder, .textarea[disabled]::-moz-placeholder {
+  color: hsl(var(--bc) / var(--tw-placeholder-opacity));
+  --tw-placeholder-opacity: 0.2; }
+.textarea-disabled::placeholder,
+  .textarea:disabled::placeholder,
+  .textarea[disabled]::placeholder {
+  color: hsl(var(--bc) / var(--tw-placeholder-opacity));
+  --tw-placeholder-opacity: 0.2; }
 @keyframes toast-pop {
   0% {
     transform: scale(0.9);
@@ -6483,8 +6487,6 @@ details.collapse summary::-webkit-details-marker {
   margin-top: 1.25rem; }
 .mt-8 {
   margin-top: 2rem; }
-.block {
-  display: block; }
 .flex {
   display: flex; }
 .grid {
@@ -6501,6 +6503,8 @@ details.collapse summary::-webkit-details-marker {
   height: 100%; }
 .h-px {
   height: 1px; }
+.h-1\/2 {
+  height: 50%; }
 .w-16 {
   width: 4rem; }
 .w-2\/3 {
@@ -6528,8 +6532,6 @@ details.collapse summary::-webkit-details-marker {
   scroll-margin-top: 6rem; }
 .scroll-mt-32 {
   scroll-margin-top: 8rem; }
-.scroll-mt-28 {
-  scroll-margin-top: 7rem; }
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr)); }
 .flex-col {
@@ -6552,6 +6554,8 @@ details.collapse summary::-webkit-details-marker {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.5rem * var(--tw-space-y-reverse)); }
+.overflow-hidden {
+  overflow: hidden; }
 .scroll-smooth {
   scroll-behavior: smooth; }
 .rounded-3xl {
@@ -6706,9 +6710,6 @@ details.collapse summary::-webkit-details-marker {
 .text-gray-700 {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity)); }
-.text-gray-800 {
-  --tw-text-opacity: 1;
-  color: rgb(31 41 55 / var(--tw-text-opacity)); }
 .text-orange-500 {
   --tw-text-opacity: 1;
   color: rgb(249 115 22 / var(--tw-text-opacity)); }
@@ -6912,10 +6913,7 @@ details.collapse summary::-webkit-details-marker {
   .lg\:right-20 {
     right: 5rem; }
   .lg\:top-10 {
-    top: 2.5rem; }
-  .lg\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem; } }
+    top: 2.5rem; } }
 @media (min-width: 1280px) {
   .xl\:mt-16 {
     margin-top: 4rem; }
