@@ -2,6 +2,9 @@
 get_header();
 ?>
 <!-- Banner Area -->
+<?php
+do_action('wp_body_open');
+?>
 <div class="container md:px-0 px-4 md:pt-16">
   <div id="banner" class="flex md:flex-row flex-col gap-14 py-12 text-white">
     <div class="md:w-1/2 w-full md:space-y-4 md:mt-6 text-center md:text-left">

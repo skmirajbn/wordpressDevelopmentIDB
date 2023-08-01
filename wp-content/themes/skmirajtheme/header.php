@@ -19,9 +19,12 @@
         }
     </script>
 </head>
+<?php
+$classes = get_body_class();
+$classlist = implode(' ', $classes);
+?>
 
-
-<body class="dark:bg-[#081C24] dark:text-white">
+<body class="dark:bg-[#081C24] dark:text-white <?= $classlist ?>">
     <header class="bg-cyan-800 dark:bg-[#081C24]">
         <!-- Nav Area Fixed -->
         <div class="md:fixed md:z-10 dark:md:bg-[#081C24] md:bg-[#155E75] w-full">
