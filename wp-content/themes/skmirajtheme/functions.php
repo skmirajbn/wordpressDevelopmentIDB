@@ -34,8 +34,8 @@ function add_custom_classes_to_menu_items($classes, $item, $args, $depth) {
 function add_menu_item($items, $args) {
   if ($args->theme_location === 'primary') {
     $myitems = <<<HTML
-        <button class="dark:hidden" onclick="toggleDark()"><i class="fa-regular fa-moon"></i></button>
-        <button class="dark:block hidden" onclick="toggleDark()"><i class="fa-solid fa-sun"></i></button>
+        <button class="dark:hidden darkbtn"><i class="fa-regular fa-moon"></i></button>
+        <button class="dark:block hidden darkbtn"><i class="fa-solid fa-sun"></i></button>
         HTML;
     $myitems .= $items;
   }
@@ -190,7 +190,7 @@ function client_section_add($wp_customize) {
     'label' => "Client 2 review text",
     'section' => 'client_Section',
     'settings' => 'client_2_reviewtext',
-    'type' => 'texarea',
+    'type' => 'textarea',
   ));
   // Client 2 Image
   $wp_customize->add_setting('client_image_2', array(

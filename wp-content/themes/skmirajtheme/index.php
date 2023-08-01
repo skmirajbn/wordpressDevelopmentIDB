@@ -25,6 +25,7 @@ get_header();
 </div>
 </header>
 <!-- Featured Bikes In This Year -->
+<?php echo do_shortcode('[scroll_to_top]'); ?>
 <section id="featured_bikes" class="py-12 px-4 md:p-0 md:mt-24 scroll-mt-32">
   <div class="container">
     <div id="featured_bikes_text">

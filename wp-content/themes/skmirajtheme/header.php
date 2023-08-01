@@ -43,6 +43,6 @@
           <li class="hover:text-orange-500"><a href="#latest_news">FAQ</a></li>
           <li class="hover:text-orange-500"><a href="#">Contact</a></li>
         </ul> -->
-                <button class="Btn btn-orange mt-4 md:mt-0">Login</button>
+                <a href="<?= get_site_url() ?>/wp-admin"><button class="Btn btn-orange mt-4 md:mt-0">Login</button></a>
             </nav>
         </div>
